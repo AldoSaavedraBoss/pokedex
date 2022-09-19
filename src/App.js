@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import { Main } from './pages/Main';
+import AuthProvider from './context/authContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import { PokemonDetails } from './pages/PokemonDetails';
+import { NotFound } from './pages/NotFound';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="routes">
+      <AuthProvider>
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/PokemonDetail/:name"
+            element={
+              <ProtectedRoute>
+                <PokemonDetails />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/" element={<Main />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AuthProvider>
     </div>
   );
-}
+};
 
 export default App;

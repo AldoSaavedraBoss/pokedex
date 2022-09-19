@@ -1,0 +1,20 @@
+.login_container{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    place-content: center;
+    background-image: url(../../../public/assets/bg_login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.login_form{
+    display: grid;
+    place-content: center;
+    
+    & label {
+        color: $dark;
+    }
+
+}

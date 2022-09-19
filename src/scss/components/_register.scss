@@ -1,0 +1,33 @@
+.register_container{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: #F2684A;
+    background: rgb(242,104,74);
+// background: linear-gradient(11deg, rgba(242,104,74,1) 0%, rgba(255,238,176,1) 100%);
+    background-image: url('../../../public/assets/charizard.png');
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        min-height: 500px;
+        position: relative;
+
+        & .back {
+            position: absolute;
+            top: 15%;
+            left: 25%;
+        }
+
+        & .form-control{
+            width: 50%;
+        }
+    }
+}

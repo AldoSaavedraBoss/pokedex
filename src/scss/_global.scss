@@ -1,0 +1,46 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    // background: rgb(65,65,65);
+    // background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(109,109,112,1) 100%); 
+    background: $black;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+}
+
+.routes{
+    width: 100vw;
+    height: 100vh;
+}
+
+li{
+    list-style: none;
+}
+
+.bug{
+    background: #aedf78;
+}
+.water{
+    background: #43ccff;
+}
+.grass{
+    background: #00ca91;
+}
+.fire{
+    background: #e95c4d;
+}
+.normal{
+    background: #a5a5a5;
+}

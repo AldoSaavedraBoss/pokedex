@@ -1,0 +1,16 @@
+/* ---BOOTSTRAP---*/
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+/* ---FONT---*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,200&display=swap');
+
+/* ---COMPONENTS---*/
+@import './global';
+@import './components/login';
+@import './components/toolbar';
+@import './components/home';
+@import './components/pokemonDetails';
+@import './components/footer';
+@import './components/register';
+@import './components/notFound';

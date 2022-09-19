@@ -1,0 +1,172 @@
+.home_main{
+
+    background: $white;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    
+}
+
+.home_selector_container{
+    background: $red-500;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    & select{
+        color:$gray-600;
+        background: $gray-100;
+        border-radius: 16px;
+        padding: 10px;
+        border: none;
+
+        & option{
+            color:$gray-600;
+        }
+    }
+}
+
+.home_section {
+    color: $white;
+
+    &:first-child{
+        border-right: 1px solid black;
+        
+    
+    }
+
+    &:last-child {
+
+        & .table{
+            box-shadow: 10px 5px 10px  rgba(0,0,0,0.75);
+        }
+    
+        & table, tr{
+            color: $dark;
+        }
+    
+        & tbody{
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            & td:nth-child(2){
+                border-right: 1px solid green;
+                border-left: 1px solid green;
+            }
+    
+        }
+    
+        & .container_poke_selected{
+            display: flex;
+            position: relative;
+    
+            & img {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);            
+            }
+    
+            & p {
+                width: 100%;
+                padding-left: 25px;
+            }
+        }
+    }
+}
+
+
+
+.container_poke_ablities{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    & p {
+        line-height: 0;
+    }
+}
+
+.home_poke_types {
+    display: flex;
+    
+
+
+    & p{
+        line-height: 16px;
+        margin-bottom: 3px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        align-self: flex-start;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+}
+
+
+.home_container_pokemons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.home_li{
+    min-height: 190px;
+    position: relative;
+}
+
+.home_card{
+    border: 1px solid $white;
+    padding: 15px 0 15px 15px;
+    position: relative;
+    min-height: max-content;
+    border-radius: 15px 0 15px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    box-shadow: 10px 5px 10px  rgba(0,0,0,0.75);
+    top: 0;
+    transition: top ease;
+
+    &:hover{
+        top:-10px;
+    }
+}
+
+.home_container_img{
+    position: relative;
+
+}
+
+.home_image{
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.home_buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+
+    &{
+        width: max-content;
+    }
+}
+
+@keyframes change{
+    0%{background-position: 0 50%}
+    50%{background-position: 100% 50%}
+    100%{background-position: 0 50%}
+}
+
+@media screen and (max-width:750px){
+    .home_main{
+        background: $gray-100;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+}

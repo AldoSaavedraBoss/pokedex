@@ -1,0 +1,20 @@
+.container_notFound{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    background: #e7eaf6;
+    background-image: url('../../../public/assets/not_found.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #a2a8d3;
+
+    & .sign{
+        position: absolute;
+        color: rgba(#201b23, 1);
+        font-size: 20rem;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+}
