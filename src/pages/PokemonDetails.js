@@ -14,7 +14,7 @@ export const PokemonDetails = ({ id }) => {
       setPokemon(response);
       setIsLoading(false);
     });
-  }, []);
+  }, [id]);
 
   if (isLoading) return <Spinner color="primary" />;
   console.log('hp', pokemon.stats[0].base_stat);
@@ -28,6 +28,7 @@ export const PokemonDetails = ({ id }) => {
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png`}
             width="350"
             height="350"
+            alt="pokemon"
           />
         </div>
         <div className="detail_bottom">
